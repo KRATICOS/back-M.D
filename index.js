@@ -88,6 +88,9 @@ const Usuario = require('./models/usuarioModel');
 const usuarioRoutes = require('./routes/usuarioRoutes');
 const materialRoutes = require('./routes/materialesRoutes');
 const reservaRoutes = require('./routes/reservaRoutes');
+const excelRoutes = require('./routes/excelRoutes'); // ajusta el path según la ubicación real
+
+
 
 
 
@@ -106,6 +109,8 @@ app.use(express.urlencoded({ extended: true })); // Para formularios HTML
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/materiales', materialRoutes);
 app.use('/api/reservas', reservaRoutes);
+app.use('/api', excelRoutes); // esto hace que la ruta sea: POST /api/excel
+
 
 
 // Crear superadministrador por defecto

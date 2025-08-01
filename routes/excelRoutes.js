@@ -4,7 +4,7 @@ const ExcelJS = require('exceljs');
 const fs = require('fs');
 const bcrypt = require('bcryptjs'); // para hashear contraseñas
 const { uploadDisk } = require('../config/multerConfig');
-const Usuario = require('../models/usuario'); // Tu modelo de usuario
+const Usuario = require('../models/usuarioModel'); // Tu modelo de usuario
 
 router.post('/excel', uploadDisk.single('archivo'), async (req, res) => {
   try {
